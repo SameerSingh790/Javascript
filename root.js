@@ -1,3 +1,2 @@
-let num = 45;
-const result = Math.sqrt(num)
-console.log(result)
+const square = (num)=> Math.sqrt(num);
+console.log(square(100));
