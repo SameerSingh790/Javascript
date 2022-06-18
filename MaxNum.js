@@ -1,5 +1,5 @@
-const MaxNum = (A,B,C)=>{
-    return Math.max(A,B,C);
+const maxnum = (A)=>(B)=>(C)=>(D)=>{
+    return Math.max(A,B,C,D);
 }
 
-console.log(MaxNum(45,65,21))
+console.log(maxnum(45)(65)(101)(75));
