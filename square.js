@@ -1,16 +1,11 @@
-let arr = [5,6,7,8,9,4,2,5]
-let Num = [];
-let Result;
+let arr = [5,6,7,500,9,4,2,5]
 
-const Mulpiplier = (array)=>{
-    arr.forEach(ele=>{
-        Num.push(ele**2)
-    })
-    console.log(Num)
-    Num.reduce((accmulutor,Curele)=>{
-        return accmulutor += Curele;
-    })
-}
+const Result = arr.map((elem)=>{
+     return elem**2
+}).reduce((accumulator,element)=>{
+    return accumulator += element;
+})
+console.log(Result)
 
-console.log(Mulpiplier())
+
 
