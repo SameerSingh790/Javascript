@@ -1,12 +1,12 @@
-const arr = [1,2,3,4]
+const Sumormul = (array)=>{
+     console.log(array.reduce((accum,elem)=>{
+       return accum += elem;
+    }))
 
-const sum = arr.reduce((accum,elem)=>{
-    return accum += elem;
-})
+     console.log(array.reduce((accum,elem)=>{
+        return accum *= elem
+    }))
+}
 
-const pro = arr.reduce((accum,elem)=>{
-    return accum *= elem;
-})
 
-console.log(sum)
-console.log(pro)
+Sumormul([1,5,2,3,5,7])
