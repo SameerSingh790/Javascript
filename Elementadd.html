@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Add,display,clear elements</title>
+<style>
+body {padding-top:50px} 
+</style> 
+</head>
+<body>
+<input type="text" placeholder="Enter Anything" id="text1"></input>
+<input type="button" id="button1" value="Add"></input>
+<input type="button" id="button2" value="Display"></input>
+<input type="button" id="button3" value="clear"></input>
+<div id="Result"></div> 
+
+<script>
+    //onclick add button
+    
+    const Input_Btn = document.getElementById("button1");//add button
+    const Show_Data_Btn = document.getElementById("button2");//Display button
+    const Clear_Btn = document.getElementById("button3");//clear button
+    let Store_Data = [];
+
+
+
+    ///Input Button
+    Input_Btn.addEventListener('click',function(){
+        const Input_Data = document.getElementById("text1").value;//Text Area
+        Store_Data.push(Input_Data);
+        console.log(Store_Data);
+        document.getElementById("text1").value = "";
+     
+
+    })
+
+    ///Display Button
+    Show_Data_Btn.addEventListener('click',function(){
+        const Result = document.getElementById("Result"); 
+        let Num = 1;
+        let e = "</hr>"
+        for(let i=0;i < Store_Data.length;i++)
+        {
+           e += `Element ${Num++} is ${Store_Data[i]}</br> `
+           Result.innerHTML = e;
+           console.log(Store_Data)
+        }
+       Store_Data.splice(0,Store_Data.length);
+    })
+
+    ///clear Button
+    Clear_Btn.addEventListener('click',function(){
+         document.getElementById("Result").innerHTML = "";
+    })
+
+
+
+
+
+
+
+
+   
+</script>
+</body>
+</html>
+
